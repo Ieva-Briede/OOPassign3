@@ -5,7 +5,7 @@ public class District {
     private String title;
     private String city;
     private int districtID;
-    private ArrayList<Person> personsInTheDistrict = new ArrayList<>();
+    private ArrayList<Officer> officersInTheDistrict = new ArrayList<>();
 
     @Override
     public String toString() {
@@ -13,18 +13,18 @@ public class District {
                 "title='" + title +
                 ", city='" + city +
                 ", districtID=" + districtID +
-                ", personsInTheDistrict=" + personsInTheDistrict;
+                ", officersInTheDistrict=" + officersInTheDistrict;
     }
 
     public District() {
 
     }
 
-    public District(String title, String city, int districtID, ArrayList<Person> personsInTheDistrict) {
+    public District(String title, String city, int districtID, ArrayList<Officer> officersInTheDistrictf) {
         this.title = title;
         this.city = city;
         this.districtID = districtID;
-        personsInTheDistrict = new ArrayList<>(personsInTheDistrict);
+        officersInTheDistrict = new ArrayList<>(officersInTheDistrict);
     }
 
     public String getTitle() {
@@ -51,17 +51,17 @@ public class District {
         this.districtID = districtID;
     }
 
-    public ArrayList<Person> getPersonsInTheDistrict() {
-        return personsInTheDistrict;
+    public ArrayList<Officer> getPersonsInTheDistrict() {
+        return officersInTheDistrict;
     }
 
-    public void setPersonsInTheDistrict(ArrayList<Person> personsInTheDistrict) {
-        this.personsInTheDistrict = personsInTheDistrict;
+    public void setPersonsInTheDistrict(ArrayList<Officer> officersInTheDistrict) {
+        this.officersInTheDistrict = officersInTheDistrict;
     }
 
-    public boolean addNewOfficer(Person person){
-       if (person != null){
-           personsInTheDistrict.add(person);
+    public boolean addNewOfficer(Officer officer){
+       if (officer != null){
+           officersInTheDistrict.add(officer);
            return true;
        } return false;
 
@@ -70,7 +70,7 @@ public class District {
     public boolean removeOfficer(String name, String surname)
     {
         if(!name.isEmpty() && !surname.isEmpty()) {
-            personsInTheDistrict.removeIf(person -> person.getName().equals(name)
+            officersInTheDistrict.removeIf(person -> person.getName().equals(name)
                     && person.getSurname().equals(surname));
             return true;
 

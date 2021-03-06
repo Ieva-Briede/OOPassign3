@@ -5,7 +5,7 @@ import java.util.Collections;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Person> person = new ArrayList<Person>();
+        ArrayList<Officer> officers = new ArrayList<Officer>();
         Officer officer1 = new Officer("Bruce", "Lee", 1050, 5);
         Officer officer2 = new Officer("James", "Bond", 1051, 127);
         Officer officer3 = new Officer("John", "Strange", 1052, 34);
@@ -14,8 +14,8 @@ public class Main {
         Officer officer6 = new Officer("John", "Tailor", 1055, 66);
         Officer officer7 = new Officer("Alice", "Johnson", 1056, 81);
 
-        District district1 = new District("District 1", "Riga", 6010, person);
-        District district2 = new District("District 2", "Ogre", 6020, person);
+        District district1 = new District("District 1", "Riga", 6010, officers);
+        District district2 = new District("District 2", "Ogre", 6020, officers);
 
         Lawyer lawyer1 = new Lawyer("Antony", "Page", 72021, 77);
         Lawyer lawyer2 = new Lawyer("Lisa", "Moonlight", 72022, 35);
