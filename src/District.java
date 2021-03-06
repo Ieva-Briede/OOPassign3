@@ -51,11 +51,11 @@ public class District {
         this.districtID = districtID;
     }
 
-    public ArrayList<Officer> getPersonsInTheDistrict() {
+    public ArrayList<Officer> getOfficersInTheDistrict() {
         return officersInTheDistrict;
     }
 
-    public void setPersonsInTheDistrict(ArrayList<Officer> officersInTheDistrict) {
+    public void setOfficersInTheDistrict(ArrayList<Officer> officersInTheDistrict) {
         this.officersInTheDistrict = officersInTheDistrict;
     }
 
@@ -76,6 +76,15 @@ public class District {
 
         }
         return false;
+    }
+    public float calculateAvgLevelInDistrict(){
+        ArrayList<Officer> officersInTheDistrict = getOfficersInTheDistrict();
+        float sum = 0;
+        for (Officer officer : officersInTheDistrict){
+            sum += officer.calculateLevel();
+        }
+        float averageLevel = sum/officersInTheDistrict.size();
+        return averageLevel;
     }
 
    }
