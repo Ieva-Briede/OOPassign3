@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Officer extends Person{
+public class Officer extends Person {
 
 
     private int officerID;
@@ -62,18 +62,18 @@ public class Officer extends Person{
     }
 
     public static Officer newOfficer() {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Officer' s name: ");
-            String name = input.nextLine();
-            System.out.println("Officers' surname: ");
-            String surname = input.nextLine();
-            System.out.println("Officers' ID number: ");
-            int officerID = input.nextInt();
-            System.out.println("Crimes solved: ");
-            int crimesSolved = input.nextInt();
-            return new Officer(name, surname, officerID, crimesSolved);
-
-        }
+        Scanner input = new Scanner(System.in);
+        System.out.println("Officer' s name: ");
+        String name = input.nextLine();
+        System.out.println("Officers' surname: ");
+        String surname = input.nextLine();
+        System.out.println("Officers' ID number: ");
+        int officerID = input.nextInt();
+        System.out.println("Crimes solved: ");
+        int crimesSolved = input.nextInt();
+        return new Officer(name, surname, officerID, crimesSolved);
 
     }
+
+}
 

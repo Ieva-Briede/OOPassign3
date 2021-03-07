@@ -56,8 +56,8 @@ public class Main {
 
         int maxCases = 0;
         Lawyer bestLawyer = null;
-        for (int i = 0; i< lawyerList.size(); i++){
-            if (lawyerList.get(i).getHelpedInCrimesSolving()> maxCases){
+        for (int i = 0; i < lawyerList.size(); i++) {
+            if (lawyerList.get(i).getHelpedInCrimesSolving() > maxCases) {
                 maxCases = lawyerList.get(i).getHelpedInCrimesSolving();
                 bestLawyer = lawyerList.get(i);
             }

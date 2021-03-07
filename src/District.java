@@ -77,13 +77,14 @@ public class District {
         }
         return false;
     }
-    public float calculateAvgLevelInDistrict(){
+
+    public float calculateAvgLevelInDistrict() {
         ArrayList<Officer> officersInTheDistrict = getOfficersInTheDistrict();
         float sum = 0;
-        for (Officer officer : officersInTheDistrict){
+        for (Officer officer : officersInTheDistrict) {
             sum += officer.calculateLevel();
         }
-        float averageLevel = sum/officersInTheDistrict.size();
+        float averageLevel = sum / officersInTheDistrict.size();
         return averageLevel;
     }
 
